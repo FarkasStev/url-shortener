@@ -1,8 +1,0 @@
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/config/AppConfig.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/config/WebAppInitializer.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/config/WebConfig.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/controller/URLController.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/model/URLMapping.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/respository/URLMappingRepository.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/respository/URLMappingRepositoryImpl.java
-/home/stevenfarkas/projects/url-shortener/src/main/java/com/myorg/urlshortener/service/URLService.java

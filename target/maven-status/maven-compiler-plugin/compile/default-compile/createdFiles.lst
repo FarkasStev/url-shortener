@@ -1,8 +1,0 @@
-com/myorg/urlshortener/model/URLMapping.class
-com/myorg/urlshortener/config/WebConfig.class
-com/myorg/urlshortener/respository/URLMappingRepository.class
-com/myorg/urlshortener/controller/URLController.class
-com/myorg/urlshortener/config/AppConfig.class
-com/myorg/urlshortener/service/URLService.class
-com/myorg/urlshortener/respository/URLMappingRepositoryImpl.class
-com/myorg/urlshortener/config/WebAppInitializer.class
