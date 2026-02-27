@@ -1,2 +1,1 @@
-./shutdown.sh
-./startup.sh
+docker compose down && docker compose up --build

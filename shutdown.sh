@@ -1,2 +1,1 @@
-docker stop url-shortener
-docker rm url-shortener
+docker compose down

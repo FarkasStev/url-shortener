@@ -36,7 +36,7 @@ public class AppConfig {
     emf.setDataSource(ds);
     emf.setPackagesToScan("com.myorg.urlshortener.model");
     HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-    adapter.setDatabase(Database.H2);
+    adapter.setDatabase(Database.POSTGRESQL);
     emf.setJpaVendorAdapter(adapter);
 
     Map<String, Object> props = new HashMap<>();
@@ -52,11 +52,18 @@ public class AppConfig {
 
   @Bean
   public DataSource dataSource() {
+    Map<String, String> env = System.getenv();
+    String host     = env.getOrDefault("DB_HOST", "localhost");
+    String port     = env.getOrDefault("DB_PORT", "5432");
+    String name     = env.getOrDefault("DB_NAME", "urlshortener");
+    String user     = env.getOrDefault("DB_USER", "postgres");
+    String password = env.getOrDefault("DB_PASSWORD", "postgres");
+
     DriverManagerDataSource ds = new DriverManagerDataSource();
-    ds.setUrl("jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE");
-    ds.setDriverClassName("org.h2.Driver");
-    ds.setUsername("sa");
-    ds.setPassword("");
+    ds.setUrl("jdbc:postgresql://" + host + ":" + port + "/" + name);
+    ds.setDriverClassName("org.postgresql.Driver");
+    ds.setUsername(user);
+    ds.setPassword(password);
     return ds;
   }
 
