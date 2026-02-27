@@ -36,4 +36,9 @@ public class URLController {
                         },
                         () -> response.setStatus(HttpServletResponse.SC_NOT_FOUND));
     }
+    @GetMapping("/ping")
+    @ResponseBody
+    public String ping() {
+        return "pong";
+    }
 }

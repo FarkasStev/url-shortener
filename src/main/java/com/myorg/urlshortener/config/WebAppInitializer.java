@@ -1,17 +1,19 @@
 package com.myorg.urlshortener.config;
 
-import org.jspecify.annotations.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
-    protected Class<?> @Nullable [] getRootConfigClasses() {
+    @Nullable
+    protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[] { AppConfig.class };
     }
 
     @Override
-    protected Class<?> @Nullable [] getServletConfigClasses() {
+    @Nullable
+    protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[] { WebConfig.class };
     }
 
