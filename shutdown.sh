@@ -1,1 +1,2 @@
-./tomcat/bin/shutdown.sh
+docker stop url-shortener
+docker rm url-shortener

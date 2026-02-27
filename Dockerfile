@@ -1,0 +1,11 @@
+# Build stage
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+# Runtime stage
+FROM tomcat:10.1-jdk21
+COPY --from=build /app/target/url-shortener.war /usr/local/tomcat/webapps/url-shortener.war
+EXPOSE 8080
